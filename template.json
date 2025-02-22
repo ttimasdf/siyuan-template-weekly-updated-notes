@@ -1,30 +1,25 @@
 {
-  "name": "template-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/template-sample",
-  "version": "0.0.3",
+  "name": "weekly-updated-notes",
+  "author": "Known Rabbit",
+  "url": "https://github.com/ttimasdf/siyuan-template-weekly-updated-notes",
+  "version": "1.0.0",
   "minAppVersion": "2.9.0",
   "displayName": {
-    "default": "Template Sample",
-    "zh_CN": "模板示例"
+    "default": "List of Updated Notes",
+    "zh_CN": "本周更新的笔记列表"
   },
   "description": {
-    "default": "This is a template sample",
-    "zh_CN": "这是一个模板示例"
+    "default": "Generate a list of note entries modified/created in given time period, e.g. in 1 week.",
+    "zh_CN": "生成特定时间段内（如，一周内）更新或新建的笔记列表"
   },
   "readme": {
     "default": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
   "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
+    "github": "ttimasdf"
   },
   "keywords": [
-    "sample", "示例"
+    "notes", "笔记"
   ]
 }

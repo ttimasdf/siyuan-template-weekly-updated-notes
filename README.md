@@ -1,121 +1,57 @@
-[中文](https://github.com/siyuan-note/template-sample/blob/main/README_zh_CN.md)
+[中文](./README_zh_CN.md)
 
-# SiYuan template sample
+# List of Updated Notes
 
-## Get started
+A plugin that generates a comprehensive list of notes that have been modified or created within a week.
 
-* Make a copy of this repo as a template with the <kbd>Use this template</kbd> button, please note that the repo name
-  must be the same as the template name, the default branch must be `main`
-* Clone your repo to a local development folder. For convenience, you can place this folder in
-  your `{workspace}/data/templates/` folder
+## Features
 
-## Development
+- Track recently updated or created notes
+- Support for both English and Chinese (中文) templates
+- Easy-to-read list format output
 
-* template.json
-* icon.png (160*160)
-* preview.png (1024*768)
-* README*.md
-* *.md
+## Example Output
 
-## template.json
+```markdown
+# Notes updated this week（20250222 ~ 20250301）
 
-```json
-{
-  "name": "template-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/template-sample",
-  "version": "0.0.3",
-  "minAppVersion": "2.9.0",
-  "displayName": {
-    "default": "Template Sample",
-    "zh_CN": "模板示例"
-  },
-  "description": {
-    "default": "This is a template sample",
-    "zh_CN": "这是一个模板示例"
-  },
-  "readme": {
-    "default": "README.md",
-    "zh_CN": "README_zh_CN.md"
-  },
-  "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
-  },
-  "keywords": [
-    "sample", "示例"
-  ]
-}
+* ((20210117215840-jcl17fx "/Data Security"))
+* ((20200923234731-h3zkwm2 "/FAQ"))
+* ((20230429114837-70asb4j "/术语表"))
+* ((20230405155631-leo4vc6 "/性能优化"))
+* ((20200923234011-ieuun1p "/Please Start Here"))
+* ((20201204181006-7bkppue "/请从这里开始/通用操作/模板片段"))
 ```
 
-* `name`: Template name, must be the same as the repo name, and must be unique globally (no duplicate template names in the
-  marketplace)
-* `author`: Template author name
-* `url`: Template repo URL
-* `version`: Template version number, it is recommended to follow the [semver](https://semver.org/) specification
-* `minAppVersion`: Minimum version number of SiYuan required to use this template
-* `displayName`: Template display name, mainly used for display in the marketplace list, supports multiple languages
-    * `default`: Default language, must exist
-    * `zh_CN`, `en_US` and other languages: optional, it is recommended to provide at least Chinese and English
-* `description`: Template description, mainly used for display in the marketplace list, supports multiple languages
-    * `default`: Default language, must exist
-    * `zh_CN`, `en_US` and other languages: optional, it is recommended to provide at least Chinese and English
-* `readme`: readme file name, mainly used to display in the marketplace details page, supports multiple languages
-    * `default`: Default language, must exist
-    * `zh_CN`, `en_US` and other languages: optional, it is recommended to provide at least Chinese and English
-* `funding`: Template sponsorship information
-    * `openCollective`: Open Collective name
-    * `patreon`: Patreon name
-    * `github`: GitHub login name
-    * `custom`: Custom sponsorship link list
-* `keywords`: Search keyword list, used for marketplace search function
+## Configuration
 
-## Package
+No special configuration required. Simply use the template from SiYuan slash menu.
 
-No matter which method is used to compile and package, we finally need to generate a package.zip, which contains at
-least the following files:
+## Languages Supported
 
-* icon.png
-* preview.png
-* README*.md
-* template.json
-* *.md
+- English
+- Chinese (简体中文)
 
-### Use Github Action
+## Requirements
 
-1. In your repo setting page `https://github.com/OWNER/REPO/settings/actions`, down to **Workflow Permissions** and open the configuration like this:
+- Compatible with latest version of SiYuan
+- No additional dependencies required
 
-    ![](https://github.com/siyuan-note/plugin-sample-vite-svelte/blob/main/asset/action.png?raw=true)
+## Contributing
 
-2. Push a tag in the format `v*` and github will automatically create a new release with new bulit package.zip
+Feel free to:
+- Report bugs
+- Suggest features
+- Submit pull requests
 
-## List on the marketplace
+## License
 
-* Generate the package.zip
-* Create a new GitHub release using your new version number as the "Tag version". See here for an
-  example: https://github.com/siyuan-note/template-sample/releases
-* Upload the file package.zip as binary attachments
-* Publish the release
+MIT License
 
-If it is the first release, please create a pull request to
-the [Community Bazaar](https://github.com/siyuan-note/bazaar) repository and modify the templates.json file in it. This
-file is the index of all community template repositories, the format is:
+## Author
 
-```json
-{
-  "repos": [
-    "username/reponame"
-  ]
-}
-```
+ttimasdf
 
-After the PR is merged, the bazaar will automatically update the index and deploy through GitHub Actions. When releasing
-a new version of the template in the future, you only need to follow the above steps to create a new release, and you
-don't need to PR the community bazaar repo.
+---
 
-Under normal circumstances, the community bazaar repo will automatically update the index and deploy every hour,
-and you can check the deployment status at https://github.com/siyuan-note/bazaar/actions.
+For more information or support, please create an issue in the repository.

@@ -1,115 +1,57 @@
-[English](https://github.com/siyuan-note/template-sample/blob/main/README.md)
+[English](./README.md)
 
-# 思源笔记模板示例
+# 本周更新的笔记列表
 
-## 开始
+一个用于生成最近一周内已修改或新建笔记列表的思源笔记插件。
 
-* 通过 <kbd>Use this template</kbd> 按钮将该库文件复制到你自己的库中，请注意库名必须和模板名称一致，默认分支必须为 `main`
-* 将你的库克隆到本地开发文件夹中，为了方便可以直接将开发文件夹放置在 `{workspace}/conf/appearance/templates/` 下
+## 功能特点
 
-## 开发
+- 追踪最近更新或新建的笔记
+- 支持中英文模板
+- 输出格式清晰易读
 
-* template.json
-* icon.png (160*160)
-* preview.png (1024*768)
-* README*.md
-* *.md
+## 输出示例
 
-## template.json
+```markdown
+# 本周更新的笔记文档（20250222 ~ 20250301）
 
-```json
-{
-  "name": "template-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/template-sample",
-  "version": "0.0.3",
-  "minAppVersion": "2.9.0",
-  "displayName": {
-    "default": "Template Sample",
-    "zh_CN": "模板示例"
-  },
-  "description": {
-    "default": "This is a template sample",
-    "zh_CN": "这是一个模板示例"
-  },
-  "readme": {
-    "default": "README.md",
-    "zh_CN": "README_zh_CN.md"
-  },
-  "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
-  },
-  "keywords": [
-    "sample", "示例"
-  ]
-}
+* ((20210117215840-jcl17fx "/Data Security"))
+* ((20200923234731-h3zkwm2 "/FAQ"))
+* ((20230429114837-70asb4j "/术语表"))
+* ((20230405155631-leo4vc6 "/性能优化"))
+* ((20200923234011-ieuun1p "/Please Start Here"))
+* ((20201204181006-7bkppue "/请从这里开始/通用操作/模板片段"))
 ```
 
-* `name`：模板名称，必须和库名一致，且全局唯一（集市中不能有重名模板）
-* `author`：模板作者名
-* `url`：模板仓库地址
-* `version`：模板版本号，建议遵循 [semver](https://semver.org/lang/zh-CN/) 规范
-* `minAppVersion`：模板支持的最低思源笔记版本号
-* `displayName`：模板显示名称，主要用于模板集市列表中显示，支持多语言
-    * `default`：默认语言，必须存在
-    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
-* `description`：模板描述，主要用于模板集市列表中显示，支持多语言
-    * `default`：默认语言，必须存在
-    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
-* `readme`：自述文件名，主要用于模板集市详情页中显示，支持多语言
-    * `default`：默认语言，必须存在
-    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
-* `funding`：模板赞助信息
-    * `openCollective`：Open Collective 名称
-    * `patreon`：Patreon 名称
-    * `github`：GitHub 登录名
-    * `custom`：自定义赞助链接列表
-* `keywords`：搜索关键字列表，用于集市搜索功能
+## 配置说明
 
-## 打包
+无需特殊配置，直接通过思源笔记的斜杠菜单使用模板即可。
 
-无论使用何种方式编译打包，我们最终需要生成一个 package.zip，它至少包含如下文件：
+## 支持语言
 
-* icon.png
-* preview.png
-* README*.md
-* template.json
-* *.md
+- 英文
+- 简体中文
 
-### 使用 Github Action 打包
+## 系统要求
 
-1. 设置项目 `https://github.com/OWNER/REPO/settings/actions` 页面向下划到 **Workflow Permissions**，打开配置
+- 兼容思源笔记最新版本
+- 无其他依赖要求
 
-    ![](https://github.com/siyuan-note/plugin-sample-vite-svelte/blob/main/asset/action.png?raw=true)
+## 参与贡献
 
-2. 需要发布版本的时候, push 一个格式为 `v*` 的 tag, github 就会自动打包发布 release（包括 package.zip）
+欢迎：
+- 报告问题
+- 提出新功能建议
+- 提交代码改进
 
+## 许可证
 
-## 上架集市
+MIT 许可证
 
-* 生成 package.zip
-* 在 GitHub 上创建一个新的发布，使用模板版本号作为 “Tag
-  version”，示例 https://github.com/siyuan-note/template-sample/releases
-* 上传 package.zip 作为二进制附件
-* 提交发布
+## 作者
 
-如果是第一次发布版本，还需要创建一个 PR 到 [Community Bazaar](https://github.com/siyuan-note/bazaar) 社区集市仓库，修改该库的
-templates.json。该文件是所有社区模板库的索引，格式为：
+ttimasdf
 
-```json
-{
-  "repos": [
-    "username/reponame"
-  ]
-}
-```
+---
 
-PR 被合并以后集市会通过 GitHub Actions 自动更新索引并部署。后续发布新版本模板时只需要按照上述步骤创建新的发布即可，不需要再
-PR 社区集市仓库。
-
-正常情况下，社区集市仓库每隔 1 小时会自动更新索引并部署，可在 https://github.com/siyuan-note/bazaar/actions 查看部署状态。
+如需更多信息或支持，请在代码仓库中创建 Issue。
